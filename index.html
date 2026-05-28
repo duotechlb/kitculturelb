@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kit Culture – Premium Football & Basketball Jerseys" />
+  <title>Kit Culture</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+
+  <!-- Icons (Feather) -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════════════
+       ANNOUNCEMENT BAR
+  ══════════════════════════════════════════════ -->
+  <div class="announcement-bar">
+    <span>🚚 Free Delivery All Over Lebanon &nbsp;|&nbsp; New 25/26 Collections Now Live 🔥</span>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner container">
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Logo -->
+      <a href="#" class="logo" id="logo-home">Kit Culture</a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-main" id="nav-main">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#" class="nav-link active" data-category="all">Home</a></li>
+
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link nav-link--toggle" data-category="Football">
+              Football <i data-feather="chevron-down" class="chevron"></i>
+            </a>
+            <div class="dropdown">
+              <ul class="dropdown-list">
+                <li><a href="#" class="dropdown-link" data-category="Football" data-sub="Fan Version">Fan Version</a></li>
+                <li><a href="#" class="dropdown-link" data-category="Football" data-sub="25/26 Collection">25/26 Collection</a></li>
+                <li><a href="#" class="dropdown-link" data-category="Football" data-sub="Player Version">Player Version</a></li>
+                <li><a href="#" class="dropdown-link" data-category="Football" data-sub="Special Edition">Special Edition</a></li>
+                <li><a href="#" class="dropdown-link" data-category="Football" data-sub="Fan Winter Tracksuit">Fan Winter Tracksuit</a></li>
+                <li><a href="#" class="dropdown-link" data-category="Football" data-sub="Player Winter Tracksuit">Player Winter Tracksuit</a></li>
+                <li><a href="#" class="dropdown-link" data-category="Football" data-sub="Sleeveless Training Kits">Sleeveless Training Kits</a></li>
+                <li><a href="#" class="dropdown-link" data-category="Football" data-sub="National Teams">National Teams</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link nav-link--toggle" data-category="Basketball">
+              Basketball Jerseys <i data-feather="chevron-down" class="chevron"></i>
+            </a>
+            <div class="dropdown">
+              <ul class="dropdown-list">
+                <li><a href="#" class="dropdown-link" data-category="Basketball">All NBA Jerseys</a></li>
+                <li><a href="#" class="dropdown-link" data-category="Basketball" data-sub="Lakers">LA Lakers</a></li>
+                <li><a href="#" class="dropdown-link" data-category="Basketball" data-sub="Bulls">Chicago Bulls</a></li>
+                <li><a href="#" class="dropdown-link" data-category="Basketball" data-sub="Rockets">Houston Rockets</a></li>
+                <li><a href="#" class="dropdown-link" data-category="Basketball" data-sub="Magic">Orlando Magic</a></li>
+                <li><a href="#" class="dropdown-link" data-category="Basketball" data-sub="Trail Blazers">Trail Blazers</a></li>
+                <li><a href="#" class="dropdown-link" data-category="Basketball" data-sub="Pelicans">Pelicans</a></li>
+                <li><a href="#" class="dropdown-link" data-category="Basketball" data-sub="Raptors">Raptors</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link" data-category="Accessories">Accessories</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <button class="icon-btn" id="search-toggle" aria-label="Search">
+          <i data-feather="search"></i>
+        </button>
+        <button class="icon-btn cart-btn" id="cart-toggle" aria-label="Cart">
+          <i data-feather="shopping-bag"></i>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search bar -->
+    <div class="search-bar" id="search-bar">
+      <div class="container">
+        <input type="text" id="search-input" placeholder="Search jerseys, teams, players…" autocomplete="off" />
+        <button class="icon-btn" id="search-close"><i data-feather="x"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <!-- Mobile Nav Drawer -->
+  <nav class="mobile-nav" id="mobile-nav">
+    <button class="mobile-nav__close" id="mobile-close"><i data-feather="x"></i></button>
+    <ul class="mobile-nav__list">
+      <li><a href="#" class="mobile-nav__link" data-category="all">Home</a></li>
+      <li class="mobile-accordion">
+        <button class="mobile-accordion__btn">Football <i data-feather="chevron-down"></i></button>
+        <ul class="mobile-accordion__list">
+          <li><a href="#" class="mobile-nav__link" data-category="Football" data-sub="Fan Version">Fan Version</a></li>
+          <li><a href="#" class="mobile-nav__link" data-category="Football" data-sub="25/26 Collection">25/26 Collection</a></li>
+          <li><a href="#" class="mobile-nav__link" data-category="Football" data-sub="Player Version">Player Version</a></li>
+          <li><a href="#" class="mobile-nav__link" data-category="Football" data-sub="Special Edition">Special Edition</a></li>
+          <li><a href="#" class="mobile-nav__link" data-category="Football" data-sub="Fan Winter Tracksuit">Fan Winter Tracksuit</a></li>
+          <li><a href="#" class="mobile-nav__link" data-category="Football" data-sub="Player Winter Tracksuit">Player Winter Tracksuit</a></li>
+          <li><a href="#" class="mobile-nav__link" data-category="Football" data-sub="Sleeveless Training Kits">Sleeveless Training Kits</a></li>
+          <li><a href="#" class="mobile-nav__link" data-category="Football" data-sub="National Teams">National Teams</a></li>
+        </ul>
+      </li>
+      <li class="mobile-accordion">
+        <button class="mobile-accordion__btn">Basketball Jerseys <i data-feather="chevron-down"></i></button>
+        <ul class="mobile-accordion__list">
+          <li><a href="#" class="mobile-nav__link" data-category="Basketball">All NBA Jerseys</a></li>
+          <li><a href="#" class="mobile-nav__link" data-category="Basketball" data-sub="Lakers">LA Lakers</a></li>
+          <li><a href="#" class="mobile-nav__link" data-category="Basketball" data-sub="Bulls">Chicago Bulls</a></li>
+          <li><a href="#" class="mobile-nav__link" data-category="Basketball" data-sub="Rockets">Houston Rockets</a></li>
+          <li><a href="#" class="mobile-nav__link" data-category="Basketball" data-sub="Magic">Orlando Magic</a></li>
+          <li><a href="#" class="mobile-nav__link" data-category="Basketball" data-sub="Trail Blazers">Trail Blazers</a></li>
+          <li><a href="#" class="mobile-nav__link" data-category="Basketball" data-sub="Pelicans">Pelicans</a></li>
+          <li><a href="#" class="mobile-nav__link" data-category="Basketball" data-sub="Raptors">Raptors</a></li>
+        </ul>
+      </li>
+      <li><a href="#" class="mobile-nav__link" data-category="Accessories">Accessories</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- HERO SECTION (only on home) -->
+    <section class="hero" id="hero-section">
+      <div class="hero__bg">
+        <div class="hero__overlay"></div>
+        <div class="hero__gradient"></div>
+      </div>
+      <div class="hero__content container">
+        <p class="hero__eyebrow">New Season Arrivals</p>
+        <h1 class="hero__title">25/26<br /><em>Collection</em></h1>
+        <p class="hero__sub">Premium football kits &amp; basketball jerseys. Fan &amp; Player versions available.</p>
+        <div class="hero__actions">
+          <a href="#" class="btn btn--primary" data-category="Football" data-sub="25/26 Collection">Shop Football</a>
+          <a href="#" class="btn btn--outline" data-category="Basketball">Shop Basketball</a>
+        </div>
+      </div>
+      <div class="hero__scroll-hint">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- COLLECTIONS STRIP -->
+    <section class="collections-strip" id="collections-strip">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Collections</h2>
+          <a href="#" class="view-all" data-category="all">View all</a>
+        </div>
+        <div class="collections-grid">
+          <div class="collection-card" data-category="Football" data-sub="25/26 Collection">
+            <div class="collection-card__img">
+              <img src="https://cdn.shopify.com/s/files/1/0670/5656/6355/files/71000e75.jpg?v=1761145223&width=600"
+                   alt="25/26 Collection" loading="lazy" />
+              <span class="collection-card__overlay"></span>
+            </div>
+            <div class="collection-card__body">
+              <h3>25/26 Collection</h3>
+              <p>Latest season kits</p>
+            </div>
+          </div>
+          <div class="collection-card" data-category="Football" data-sub="Special Edition">
+            <div class="collection-card__img">
+              <img src="https://cdn.shopify.com/s/files/1/0670/5656/6355/files/1bebc5a0.jpg?v=1761146516&width=600"
+                   alt="Special Edition" loading="lazy" />
+              <span class="collection-card__overlay"></span>
+            </div>
+            <div class="collection-card__body">
+              <h3>Special Edition</h3>
+              <p>Limited &amp; exclusive kits</p>
+            </div>
+          </div>
+          <div class="collection-card" data-category="Football" data-sub="National Teams">
+            <div class="collection-card__img">
+              <img src="https://cdn.shopify.com/s/files/1/0670/5656/6355/files/MdtP1ixUgYkBGI7.jpg?v=1775141071&width=600"
+                   alt="National Teams" loading="lazy" />
+              <span class="collection-card__overlay"></span>
+            </div>
+            <div class="collection-card__body">
+              <h3>National Teams</h3>
+              <p>World Cup &amp; Euro kits</p>
+            </div>
+          </div>
+          <div class="collection-card" data-category="Basketball">
+            <div class="collection-card__img">
+              <img src="https://cdn.shopify.com/s/files/1/0670/5656/6355/files/8e162d99.jpg?v=1759947695&width=600"
+                   alt="Basketball" loading="lazy" />
+              <span class="collection-card__overlay"></span>
+            </div>
+            <div class="collection-card__body">
+              <h3>Basketball</h3>
+              <p>NBA jerseys all editions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOP PICKS / ALL PRODUCTS -->
+    <section class="products-section" id="products-section">
+      <div class="container">
+        <div class="section-header" id="products-header">
+          <h2 class="section-title" id="products-title">Top Picks</h2>
+          <div class="products-controls">
+            <select class="sort-select" id="sort-select">
+              <option value="default">Sort: Default</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name-asc">Name: A–Z</option>
+              <option value="name-desc">Name: Z–A</option>
+            </select>
+            <a href="#" class="view-all" id="view-all-link" data-category="all">View all</a>
+          </div>
+        </div>
+
+        <!-- Loading skeleton -->
+        <div class="products-grid" id="products-grid">
+          <div class="product-skeleton"></div>
+          <div class="product-skeleton"></div>
+          <div class="product-skeleton"></div>
+          <div class="product-skeleton"></div>
+          <div class="product-skeleton"></div>
+          <div class="product-skeleton"></div>
+          <div class="product-skeleton"></div>
+          <div class="product-skeleton"></div>
+        </div>
+
+        <!-- No results -->
+        <div class="no-results" id="no-results" hidden>
+          <i data-feather="search"></i>
+          <p>No products found. Try a different search or category.</p>
+          <button class="btn btn--primary" onclick="App.resetFilter()">Show all products</button>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination" id="pagination"></div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-box">
+          <h2>Subscribe to our emails</h2>
+          <p>Be the first to know about new collections and exclusive offers.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit" class="btn btn--primary">Subscribe</button>
+          </form>
+          <p class="newsletter-success" id="newsletter-success" hidden>✅ Thanks for subscribing!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">Kit Culture</span>
+          <p>Premium football kits &amp; basketball jerseys delivered all over Lebanon.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i data-feather="instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i data-feather="facebook"></i></a>
+            <a href="#" aria-label="WhatsApp"><i data-feather="message-circle"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Football</h4>
+          <ul>
+            <li><a href="#" data-category="Football" data-sub="Fan Version">Fan Version</a></li>
+            <li><a href="#" data-category="Football" data-sub="Player Version">Player Version</a></li>
+            <li><a href="#" data-category="Football" data-sub="Special Edition">Special Edition</a></li>
+            <li><a href="#" data-category="Football" data-sub="National Teams">National Teams</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="#" data-category="Basketball">Basketball Jerseys</a></li>
+            <li><a href="#" data-category="Accessories">Accessories</a></li>
+            <li><a href="#" data-category="Football" data-sub="Fan Winter Tracksuit">Tracksuits</a></li>
+            <li><a href="#" data-category="Football" data-sub="Sleeveless Training Kits">Training Kits</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">Sizing Guide</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Kit Culture. All rights reserved.</p>
+        <p class="footer-powered">Powered by Google Sheets + Apps Script</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════
+       CART SIDEBAR
+  ══════════════════════════════════════════════ -->
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-sidebar__header">
+      <h3>Your Cart</h3>
+      <button class="icon-btn" id="cart-close"><i data-feather="x"></i></button>
+    </div>
+    <div class="cart-sidebar__body" id="cart-body">
+      <div class="cart-empty" id="cart-empty">
+        <i data-feather="shopping-bag"></i>
+        <p>Your cart is empty</p>
+        <button class="btn btn--outline" id="cart-continue">Continue Shopping</button>
+      </div>
+      <ul class="cart-items" id="cart-items"></ul>
+    </div>
+    <div class="cart-sidebar__footer" id="cart-footer" hidden>
+      <div class="cart-total">
+        <span>Estimated Total</span>
+        <span id="cart-total-price">$0.00</span>
+      </div>
+      <p class="cart-note">Taxes &amp; shipping calculated at checkout.</p>
+      <button class="btn btn--primary btn--full" id="checkout-btn">Checkout via WhatsApp</button>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cart-overlay" hidden></div>
+
+  <!-- ══════════════════════════════════════════════
+       PRODUCT MODAL
+  ══════════════════════════════════════════════ -->
+  <div class="product-modal" id="product-modal" hidden>
+    <div class="product-modal__backdrop" id="modal-backdrop"></div>
+    <div class="product-modal__panel">
+      <button class="product-modal__close" id="modal-close"><i data-feather="x"></i></button>
+      <div class="product-modal__inner" id="modal-inner">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
