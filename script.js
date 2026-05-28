@@ -170,7 +170,7 @@ function checkoutWhatsApp() {
     });
     const total = cart.reduce((sum, i) => sum + i.price * i.quantity, 0);
     message += `%0A*Total: $${total.toFixed(2)}*%0A%0A📍 Delivery in Lebanon (COD)`;
-    const phone = "96176419154"; // Replace with your WhatsApp number
+    const phone = "96103322103"; // Replace with your WhatsApp number
     window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
 }
 
